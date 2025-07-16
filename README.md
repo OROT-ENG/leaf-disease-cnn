@@ -1,18 +1,17 @@
 
-# 🥬 Leaf Disease Classification with CNN
+Leaf Disease Classification with CNN
+```
+This project uses a Convolutional Neural Network (CNN) to classify bell pepper plant leaves as either Healthy or Bacterial Spot Infected, based on image data. It also includes Digital Image Processing (DIP) techniques like grayscale conversion, thresholding, and contour detection to visualize key stages of image preprocessing.
 
-This project uses a Convolutional Neural Network (CNN) to classify bell pepper plant leaves as either **Healthy** or **Bacterial Spot Infected**, based on image data. It also includes Digital Image Processing (DIP) techniques like grayscale conversion, thresholding, and contour detection to visualize key stages of image preprocessing.
+Project Overview
+- Binary classification: Healthy vs Bacterial Spot
+- Dataset: [PlantVillage Dataset](https://www.kaggle.com/datasets/emmarex/plantdisease)
+- Tools: TensorFlow, OpenCV, Matplotlib, Scikit-learn
+- Input: RGB leaf images
+- Output: Classification label (`Healthy` or `Unhealthy`)
 
-## 🧠 Project Overview
-
-- 🔍 Binary classification: Healthy vs Bacterial Spot
-- 📷 Dataset: [PlantVillage Dataset](https://www.kaggle.com/datasets/emmarex/plantdisease)
-- 🛠️ Tools: TensorFlow, OpenCV, Matplotlib, Scikit-learn
-- 📁 Input: RGB leaf images
-- ✅ Output: Classification label (`Healthy` or `Unhealthy`)
-
-## 🧪 Digital Image Processing (DIP) Steps
-
+Digital Image Processing (DIP) Steps
+```
 For each image:
 1. Resize to 128x128
 2. Convert to Grayscale
@@ -28,25 +27,7 @@ plt.subplot(1, 4, 4), plt.imshow(cv2.cvtColor(img_contour, cv2.COLOR_BGR2RGB)), 
 plt.show()
 ```
 
-## 📂 Directory Structure
-
-```
-DIP PROJECT/
-│
-├── PlantVillage/
-│   ├── Pepper__bell___healthy/
-│   └── Pepper__bell___Bacterial_spot/
-│
-├── leaf_disease_code.py          
-├── leaf_disease_model.h5         
-├── leaf_disease_model.keras      
-├── code-and-output.html          
-├── requirements.txt              
-├── README.md                     
-└── leaf_test.jpg, leaf_test2.jpg 
-```
-
-## 🚀 Model Architecture
+## Model Architecture
 
 ```text
 Input: (128x128x3)
@@ -59,25 +40,16 @@ Dropout (0.5)
 Dense (2 units) → Softmax
 ```
 
-## 📊 Accuracy & Loss Plots
+## Accuracy & Loss Plots
 
 Training and validation performance were tracked across epochs. See `leaf_disease_code.py` for graphs.
 
-## 🧪 Testing the Model
+## Testing the Model
 
 ```python
 test_paths = [r"C:\Users\HP\Desktop\leaf_test.jpg", r"C:\Users\HP\Desktop\leaf_test2.jpg"]
 ```
-
-## 📦 Installation
-
-```bash
-git clone https://github.com/OROT-ENG/leaf-disease-cnn.git
-cd leaf-disease-cnn
-pip install -r requirements.txt
-```
-
-## ✅ Requirements
+Requirements
 
 - Python 3.10
 - TensorFlow 2.x
@@ -85,8 +57,8 @@ pip install -r requirements.txt
 - Matplotlib
 - Scikit-learn
 - NumPy
-
-## ✨ Credits
+```
+Credits
 
 - Dataset: [PlantVillage on Kaggle](https://www.kaggle.com/datasets/emmarex/plantdisease)
-- Author: [OROT-ENG](https://github.com/OROT-ENG)
+
